@@ -20,7 +20,7 @@ function Tarefas() {
 
     async function deletarTarefa(id) {
         try {
-            const url = `http://localhost:3000/tarefas/${id}`;
+            const url = `https://api-tarefas-20dr.onrender.com/tarefas/${id}`;
             const token = localStorage.getItem("token");
 
             await axios.delete(url, {
@@ -35,7 +35,7 @@ function Tarefas() {
 
     async function salvarEdicao(id) {
         try {
-            const url = `http://localhost:3000/tarefas/${id}`;
+            const url = `https://api-tarefas-20dr.onrender.com/tarefas/${id}`;
             const token = localStorage.getItem("token");
 
             await axios.put(url, {
@@ -57,7 +57,7 @@ function Tarefas() {
     const criarTarefa = async (e) => {
         e.preventDefault();
         try {
-            const url = "http://localhost:3000/tarefas";
+            const url = "https://api-tarefas-20dr.onrender.com/tarefas";
             const token = localStorage.getItem("token");
 
             await axios.post(url, {
@@ -87,7 +87,7 @@ function Tarefas() {
             if (filtroStatus) params.status = filtroStatus;
             if (filtroPrioridade) params.prioridade = filtroPrioridade;
 
-            const retorno = await axios.get("http://localhost:3000/tarefas", {
+            const retorno = await axios.get("https://api-tarefas-20dr.onrender.com/tarefas", {
                 headers: { Authorization: `Bearer ${token}` },
                 params
             });

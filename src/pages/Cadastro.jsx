@@ -13,7 +13,7 @@ function Cadastro() {
         event.preventDefault();
         console.log(nome, email, senha);
         try {
-            const resposta = await fetch("http://localhost:3000/cadastro", {
+            const resposta = await fetch("https://api-tarefas-20dr.onrender.com/cadastro", {
               method:"Post",
               headers:{
                 'Content-Type': 'application/json',  // Define que os dados enviados são JSON'
